@@ -1,0 +1,111 @@
+%Legt Dokumententyp fest
+\documentclass[12pt]{scrreprt}
+%Paket zur Verbesserung von Textdarstellung
+\usepackage[final]{microtype}
+%Legt fest bis zu welchem Level Sektionen im Inhaltsverzeinis angezeigt werden
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+%Sprachpaket für DE
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+%Setzt den Zeilenabstand auf 1,5
+\usepackage[onehalfspacing]{setspace}
+%Dient zum Einbinden von Bildern
+\usepackage{graphicx}
+%Einfügen von Bildern inerhalb von Text
+\usepackage{wrapfig}
+%Rendern von Code mit Python
+\usepackage{minted}
+\setminted{obeytabs=true,tabsize=1}
+%PDF-Export mit Hyperlinks
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdfpages}
+\usepackage{subfigure}
+\hypersetup{allcolors=black}
+%Setzt Seitenränder rundum auf 2,5cm
+\usepackage[margin=2.5cm]{geometry}
+
+%Titelblatt mit erforderlichen Angaben
+\title{Titel der Arbeit}
+\author{Autor}
+%Römische Seitenzahlen
+\begin{document}
+\pagenumbering{Roman}
+\begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+        \vspace*{1cm}
+
+        \Huge
+        \textbf{Titel der Arbeit}\\
+        \vspace{1cm}
+        \large
+        \textbf{Autor}\\
+        \vspace{2cm}
+        Typ der Arbeit\\
+        im Rahmen des Studiengangs Musterstudiengang\\
+        an der\\
+        Dualen Hochschule Baden-Württemberg Musterstadt
+
+        \vspace{5cm}
+
+        \begin{tabular}{l@{\hspace{2cm}}l}
+            Matrikelnummer:                & 3141592654                     \\
+            Kurs:                          & INF99A                        \\
+            Ausbildungsfirma:              & Firma \\
+                                           & GmbH\&Co.KG            \\
+                                           & Adresse   \\
+            Betreuer der Ausbildungsfirma: & Rainer Zufall                  \\
+        \end{tabular}
+    \end{center}
+\end{titlepage}
+
+\begin{framed}
+    \begin{center}
+        \Large\bfseries Sperrvermerk
+    \end{center}
+    \medskip
+    \noindent
+    Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen Personen
+    außerhalb des Prüfungsprozesses und des Evaluationsverfahrens zugänglich gemacht
+    werden, sofern keine anderslautende Genehmigung vom Dualen Partner vorliegt.
+\end{framed}
+
+\begin{framed}
+    \begin{center}
+        \Large\bfseries Eigenständigkeitserklärung
+    \end{center}
+    \medskip
+    \noindent
+    Ich versichere hiermit, dass ich meine Projektarbeit mit dem Thema:\\
+    "Titel der Arbeit"\\
+    selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Ich versichere zudem,
+    dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.
+
+
+    \vspace{3cm}
+    \noindent
+    \underline{\hspace{4cm}}\hfill\underline{\hspace{6cm}}\\
+    Ort~~~~~Datum\hfill Unterschrift\hspace{4cm}
+\end{framed}
+\pagebreak
+
+
+
+\listoffigures
+\clearpage
+\pagebreak
+
+\tableofcontents
+\clearpage
+\pagebreak
+
+\pagenumbering{arabic}
+\chapter{Allgemeines}
+\section{Problemstellung}
+\section{Umsetzung}
+\subsection{Frontend}
+\subsection{Backend}
+\section{Reflexion und Ausblick}
+
+\end{document}
