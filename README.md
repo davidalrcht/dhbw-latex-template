@@ -1,4 +1,4 @@
-# DHBW LaTeX Vorlage 
+# DHBW LaTeX Vorlage :mortar_board:
 Einfache LaTex Vorlage für Arbeiten an der DHBW.
 
 ## Setup 
