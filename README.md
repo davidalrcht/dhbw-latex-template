@@ -1,5 +1,5 @@
 # DHBW LaTeX Vorlage :mortar_board:
-Einfache LaTex Vorlage für Arbeiten an der DHBW.
+Einfache LaTeX Vorlage für Arbeiten an der DHBW.
 
 ## Setup 
 ### LaTeX in Visual Studio Code
