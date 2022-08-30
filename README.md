@@ -1,18 +1,21 @@
-# DHBW LaTex template
-A simple LaTex template conform with DHBW (e.g. Mosbach) thesis standards
+# DHBW LaTeX Vorlage 
+Einfache LaTex Vorlage für Arbeiten an der DHBW.
 
-(for german doc click here (...))
+## Setup 
+### LaTeX in Visual Studio Code
+In Visual Studio Code muss die Erweiterung "LaTeX-Workshop" von James Yu installiert werden. Hierbei einfach den Installationsanweisungen ([Link](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install)) der Erweiterung folgen und eine LaTeX Distribution installieren, die Empfehlung ist "TeXLive". [(Link zu TeXLive)](https://www.tug.org/texlive/)
 
-## Setup
-### LaTex in Visual Studio Code
+### Codeausschnitte mit Python
 
-Visual Studio Code can be downloaded for free at (...)
-Latex-Workshop is a widely used VS-Code extension for latex (...)
+In der Vorlage ist standardmäßig das "minted" Paket eingebunden, dieses stellt Quellcodeausschnitte
+mithilfe von Python dar, es ist also eine Python-Installation erforderlich. [(Python installieren)](https://www.python.org/downloads/) 
 
-### Render code with python
+## Vorlage nutzen 
 
-Minted is a package for latex wich uses python to render code in latex
+Ist alles installiert, die "thesis.tex" Datei kopieren/klonen und in VS Code öffnen. LaTeX-Workshop erkennt das Format automatisch, über den Button "TEX" in der linken Leiste kann das Dokument kompiliert werden, oder die Vorschau aktiviert werden. 
 
-##  How to use
+Bei Änderungen wird das Dokument automatisch kompiliert, es dauert möglicherweise einge Sekunden bis die Änderungen sichtbar sind. Durch die Erweiterung wird automatisch eine .pdf im selben Verzeichnis erstellt, diese stellt das finale Dokument dar.
+
+
 
 

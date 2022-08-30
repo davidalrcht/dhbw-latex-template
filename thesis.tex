@@ -1,8 +1,8 @@
 %Legt Dokumententyp fest
 \documentclass[12pt]{scrreprt}
-%Paket zur Verbesserung von Textdarstellung
+%Verbesserung von Textdarstellung
 \usepackage[final]{microtype}
-%Legt fest bis zu welchem Level Sektionen im Inhaltsverzeinis angezeigt werden
+%Legt fest bis zu welcher Tiefe (Kapitel, Sektion etc.)Gliederungen im Inhaltsverzeinis angezeigt werden
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
 %Sprachpaket für DE
@@ -25,17 +25,20 @@
 %Setzt Seitenränder rundum auf 2,5cm
 \usepackage[margin=2.5cm]{geometry}
 
-%Titelblatt mit erforderlichen Angaben
+%Grundlegende Angaben
 \title{Titel der Arbeit}
 \author{Autor}
-%Römische Seitenzahlen
+
 \begin{document}
+%Römische Seitenzahlen (I, II, III ...)
 \pagenumbering{Roman}
+%Titelseite
 \begin{titlepage}
+    %Entfernen der Seitenzahl auf Titelseite
     \thispagestyle{empty}
     \begin{center}
+        %Angaben auf Titelseite
         \vspace*{1cm}
-
         \Huge
         \textbf{Titel der Arbeit}\\
         \vspace{1cm}
@@ -46,20 +49,21 @@
         im Rahmen des Studiengangs Musterstudiengang\\
         an der\\
         Dualen Hochschule Baden-Württemberg Musterstadt
-
         \vspace{5cm}
 
+        %Allgemeine Angaben
         \begin{tabular}{l@{\hspace{2cm}}l}
-            Matrikelnummer:                & 3141592654                     \\
-            Kurs:                          & INF99A                        \\
+            Matrikelnummer:                & 3141592\\
+            Kurs:                          & INF21B\\
             Ausbildungsfirma:              & Firma \\
-                                           & GmbH\&Co.KG            \\
-                                           & Adresse   \\
-            Betreuer der Ausbildungsfirma: & Rainer Zufall                  \\
+                                           & GmbH\&Co.KG\\
+                                           & Adresse\\
+            Betreuer der Ausbildungsfirma: & Rainer Zufall\\
         \end{tabular}
     \end{center}
 \end{titlepage}
 
+%Seite mit Sperrvermerk und Eigenständigkeitserklärung
 \begin{framed}
     \begin{center}
         \Large\bfseries Sperrvermerk
@@ -82,7 +86,6 @@
     selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Ich versichere zudem,
     dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.
 
-
     \vspace{3cm}
     \noindent
     \underline{\hspace{4cm}}\hfill\underline{\hspace{6cm}}\\
@@ -90,22 +93,43 @@
 \end{framed}
 \pagebreak
 
-
-
+%Abbildungsverzweichnis
 \listoffigures
 \clearpage
 \pagebreak
 
+%Inhaltsverzeichnis
 \tableofcontents
 \clearpage
 \pagebreak
 
+%Ab hier Arabische Seitenzahlen (1,2,3,4)
 \pagenumbering{arabic}
-\chapter{Allgemeines}
-\section{Problemstellung}
-\section{Umsetzung}
-\subsection{Frontend}
-\subsection{Backend}
-\section{Reflexion und Ausblick}
+
+%Kapitel mit Untersektionen
+\chapter{Kapitel}
+Text in Kapitel
+\section{Sektion}
+Text in Sektion
+\subsection{Untersektion}
+Text in Untersektion
+\subsubsection{Unteruntersektion}
+Text in Unteruntersektion
+\paragraph{Paragraph}
+Text in Paragraph
+
+%Quellenverzeichnis
+\def\refname{Quellen}
+\def\bibname{Quellen}
+
+\begin{thebibliography}{setlabelphantom{XXXXXXXXX}}
+    \addcontentsline{toc}{chapter}{Internetquellen}
+
+    %Eintrag in Quellenverzeichnis
+    \bibitem[1]{1} Autor der Quelle, Titel der Quelle, \\
+    \href{"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjDg7Xhx-75AhVBhP0HHUwzAXYQwqsBegQIBRAB&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU"}{"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjDg7Xhx-75AhVBhP0HHUwzAXYQwqsBegQIBRAB&url=https\%3A\%2F\%2Fwww.youtube.com\%2Fwatch\%3Fv\%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU"},\\
+    letzter Zugriff am: 30.08.2022
+
+\end{thebibliography}
 
 \end{document}
